@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,10 +37,11 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/lp.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="ctrl">
     <div class="body-inner">
         <header id="header" data-transparent="true" class="header-modern dark">
             <div class="header-inner" >
@@ -77,26 +78,25 @@
 
                                 <div id="book" class="card text-dark">
                                     <div class="card-body">
-                                        <form method="post" action="#">
                                             <h3 class="m-b-20">Coloque suas informações e ligaremos rapidamente</h3>
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label>NOME E SOBRENOME</label>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" ng-model="formdata.name"  class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>E-MAIL</label>
                                                         <div class="form-group">
-                                                            <input type="email" class="form-control">
+                                                            <input type="email" ng-model="formdata.email"  class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>TELEFONE</label>
                                                         <div class="form-group">
-                                                            <input type="phone" class="form-control">
+                                                            <input type="phone" ng-model="formdata.phonenumber"  class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -105,7 +105,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>QUAL O VALOR DESEJADO </label>
-                                                        <select class="form-select" name="destination_from"
+                                                        <select class="form-select" ng-model="formdata.value_target"  name="destination_from"
                                                             id="destination_from">
                                                             <option value="">Informe...</option>
                                                             <option value="Até R$200 mil">Até R$200 mil</option>
@@ -120,7 +120,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>QUAL SEU OBJETIVO</label>
-                                                        <select class="form-select" name="destination_to"
+                                                        <select class="form-select" ng-model="formdata.objective"  name="destination_to"
                                                             id="destination_to">
                                                             <option value="">Conte-nos...</option>
                                                             <option value="Imóvel">Imóvel</option>
@@ -138,7 +138,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label>TEM VALOR PARA LANCE ?</label>
-                                                        <select class="form-select" name="destination_to"
+                                                        <select class="form-select" ng-model="formdata.has_lance" name="destination_to"
                                                         id="destination_to">
                                                             <option value="1">Sim, mas preciso entender maiores detalhes.</option>
                                                             <option value="0">Não possuo, farei sem lance.</option>
@@ -150,11 +150,10 @@
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
-                                                        <button class="btn btn-dark m-t-20" style="width: 100%;">Falar com um especialista</button>
+                                                        <button class="btn btn-dark m-t-20" style="width: 100%;" ng-click="sendData(formdata)">Falar com um especialista</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -511,23 +510,22 @@
           </h6>
         </div>
         <div class="modal-body" style="background-color: rgba(235,229,222,1);">
-            <form>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Seu nome</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1">
+                  <input type="text" class="form-control" ng-model="formdatawpp.name"  id="exampleInputEmail1">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Seu email</label>
-                  <input type="email" class="form-control" id="exampleInputPassword1">
+                  <input type="email" class="form-control" ng-model="formdatawpp.email"  id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Seu telefone</label>
-                  <input type="number" class="form-control" id="exampleInputPassword1">
+                  <input type="number" class="form-control" ng-model="formdatawpp.phone"  id="exampleInputPassword1">
                 </div>
-              </form>
+                <input type="hidden" ng-model="formdatawpp.typeform"  value="whatsapp">
         </div>
         <div class="modal-footer"  style="background-color: rgba(235,229,222,1);">
-          <button type="button" class="btn btn-success" style="width: 100%; background-color: rgba(83,164,81,1) !important;">INICIAR CONVERSA</button>
+          <button type="button" class="btn btn-success" style="width: 100%; background-color: rgba(83,164,81,1) !important;" ng-click="sendData(formdatawpp)">INICIAR CONVERSA</button>
         </div>
       </div>
     </div>
