@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Analitica Dados" />
+    <meta name="description" content="Alavanca Investimentos">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>Alavanca Investimentos</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS TAXI STYLE -->
+    <link rel="stylesheet" type="text/css" href="homepages/taxi/css/taxi-style.css" media="screen" />
+    <style>
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+          font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+          z-index:100;
+        }
+        
+        .my-float{
+            margin-top:16px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body>
+    <div class="body-inner">
+        <header id="header" data-transparent="true" class="header-modern dark">
+            <div class="header-inner" >
+                <div class="container">
+                    <div id="logo"  style="
+                    margin-left: 25%;
+                    color: yellow;"> <a href="index.html" style="
+                        color: gold;
+                        text-shadow: #000 1px 0 10px;
+                    ">Alavanca Investimentos</a> </div>
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+
+        <!-- FULLSCREEN IMAGE -->
+        <section id="section1" class="fullscreen" data-bg-image="homepages/taxi/images/slider/0.png">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="container-fullscreen">
+                    <div class="text-middle">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="text-light m-t-40 p-t-40">
+
+                                    <span class="text-medium m-b-0">O CONSÓRCIO</span>
+                                    <h2 class="text-lg-x2 fw-800 text-colored m-t-0" style="font-size: 89px !important;">ESTRUTURADO</h2>
+                                    <h3>com a contemplação <strong style="color: gold;text-shadow: #000 1px 0 10px;">mais rápida</strong> do Brasil</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 offset-1">
+
+                                <div id="book" class="card text-dark">
+                                    <div class="card-body">
+                                        <form method="post" action="#">
+                                            <h3 class="m-b-20">Coloque suas informações e ligaremos rapidamente</h3>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>NOME E SOBRENOME</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>E-MAIL</label>
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>TELEFONE</label>
+                                                        <div class="form-group">
+                                                            <input type="phone" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>QUAL O VALOR DESEJADO </label>
+                                                        <select class="form-select" name="destination_from"
+                                                            id="destination_from">
+                                                            <option value="">Informe...</option>
+                                                            <option value="Até R$200 mil">Até R$200 mil</option>
+                                                            <option value="R$200 mil à R$500 mil">R$200 mil à R$500 mil</option>
+                                                            <option value="R$500 mil à R$1 milhão">R$500 mil à R$1 milhão</option>
+                                                            <option value="R$1 milhão - R$2 milhões">R$1 milhão - R$2 milhões</option>
+                                                            <option value="Acima de R$2 milhões">Acima de R$2 milhões</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>QUAL SEU OBJETIVO</label>
+                                                        <select class="form-select" name="destination_to"
+                                                            id="destination_to">
+                                                            <option value="">Conte-nos...</option>
+                                                            <option value="Imóvel">Imóvel</option>
+                                                            <option value="Automóvel">Automóvel</option>
+                                                            <option value="Terreno">Terreno</option>
+                                                            <option value="Capital de Giro">Capital de Giro</option>
+                                                            <option value="Caminhão">Caminhão</option>
+                                                            <option value="Máquinas">Máquinas</option>
+                                                            <option value="Serviços">Serviços</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>TEM VALOR PARA LANCE ?</label>
+                                                        <select class="form-select" name="destination_to"
+                                                        id="destination_to">
+                                                            <option value="1">Sim, mas preciso entender maiores detalhes.</option>
+                                                            <option value="0">Não possuo, farei sem lance.</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <button class="btn btn-dark m-t-20" style="width: 100%;">Falar com um especialista</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <!-- TRANSPORT -->
+        <section id="section3" class="box-fancy section-fullwidth text-light no-padding">
+            <div class="row">
+                <div class="col-lg-4 text-center" style="background-color: rgb(143, 109, 29);">
+                    <h1>+5.500</h1>
+                    <span>Municípios atuantes no Brasil </span>
+                </div>
+
+                <div class="col-lg-4 text-center" style="background-color: rgb(173, 136, 48);">
+                    <h1>+600</h1>
+                    <span>Clientes parceiros na carteira de investimentos </span>
+                </div>
+
+                <div class="col-lg-4 text-center" style="background-color: rgb(143, 109, 29);">
+                    <h3>+100 Milhões</h3>
+                    <span>de reais em contemplações </span>
+                </div>
+                
+                <div class="col-lg-4 text-center" style="background-color: rgb(192, 146, 39);">
+                    <h1>+15</h1>
+                    <span>Anos de experiência em consultoria ajudando pessoas e empresas </span>
+                </div>
+
+                <div class="col-lg-4 text-center" style="background-color: rgb(209, 164, 57);">
+                    <h1>+10</h1>
+                    <span>Administradoras parceiras </span>
+                </div>
+
+                <div class="col-lg-4 text-center" style="background-color: rgb(192, 146, 39);">
+                    <h3>+80%</h3>
+                    <span>mais rápida a contemplação utilizando operação estruturada </span>
+                </div>
+            </div>
+        </section>
+        <!-- TRANSPORT -->
+
+        <!-- GALLERY -->
+        <section id="section4" class="">
+
+            <div class="row">
+                <div class="col-md-12 text-center" style="padding-left: 10%;padding-right: 10%;">
+                    <h1>
+                        A Alavanca Investimentos pertence a uma holding com 10 anos de mercado nos segmentos de BPO, tecnologia, imobiliário e investimentos
+                    </h1>
+                    
+                    <h3>
+                        Nosso time de consultoria tem mais de 15 anos de experiência em relacionamento consultivo e em nosso portfólio temos as mais renomadas administradoras do país. 
+                        Entregaremos um projeto customizado e personalizado para cada necessidade.
+                    </h3>
+
+                    <h5>
+                        "Aqui somos obcecados em querer entregar a melhor experiência consultiva aos nossos parceiros" 
+                        <br>
+                        <small style="color: #000 !important;">Fernando Pereira - Head de Relacionamento</small>
+                    </h5>
+                </div>
+            </div>
+
+        </section>
+        <!-- end: GALLERY -->
+
+        <!-- SERVICES & TESTOMONIALS -->
+        <section id="section5" class="background-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-medium">PRIORIZAMOS PELO ATENDIMENTO CONSULTIVO</div>
+                        <p class="lead">
+                            e personalizado, além de transparente é muito seguro, veja como é simples
+                        </p>
+                        <div class="accordion toggle fancy clean accordion-transparent">
+                            <div class="ac-item ac-active">
+                                <h5 class="ac-title ">
+                                    <i class="fas fa-business-time"></i>
+                                    1º passo</h5>
+                                <div class="ac-content">
+                                    <h4>O consultor</h4> coletará informações em um telefonema para construir um projeto customizado.
+                                </div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    <i class="fas fa-binoculars"></i>
+                                    2° passo
+                                </h5>
+                                <div class="ac-content">Iremos pesquisar e analisar + de 500 grupos diferentes em todas as administradoras parceiras para identificar oportunidade com velocidade na contemplação.                                </div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    3º passo
+                                </h5>
+                                <div class="ac-content">
+                                    <p>Em um call <strong> 1:1 </strong> apresentaremos o projeto e juntos avaliaremos outros grupos e oportunidades, isso com a tela compartilhada mostrando simuladores, 100% transparente.</p>
+                                </div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    <i class="fas fa-people-arrows"></i>
+                                    4º passo
+                                </h5>
+                                <div class="ac-content">Após ingressar em um grupo seremos parceiros, fará parte de um network para investidores e teremos um acompanhamento mensal até a contemplação.</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVICES & TESTOMONIALS -->
+        <section id="section6" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-medium">Você chegou aqui e é novo no consórcio?</div>
+                        <p class="lead">
+                            A gente criou uma área exclusiva para te deixar seguro e tranquilo para investir no seu sonho.
+                        </p>
+                        <div class="accordion toggle fancy clean accordion-transparent">
+                            <div class="ac-item ">
+                                <h5 class="ac-title ">Porque agendam uma reunião on-line e não mandam a proposta por e-mail ou whats?</h5>
+                                <div class="ac-content">
+                                    Na Alavanca Investimentos é muito comum durante a apresentação do projeto e das opções levantadas pelo analista durante a pesquisa que foi realizada para customizar a proposta, precisar verificar outras opções, discutir novas soluções, pesquisar outros grupos, outras administradoras e isso tudo é feito de forma bem transparente com a tela sendo compartilhada.
+
+
+                                </div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Quais informações são importantes serem levantadas para que o
+				analista crie um projeto customizado e personalizado?
+                                </h5>
+                                <div class="ac-content">
+                                    <ul>
+<li> Qual bem que quer adquirir: imóvel, autos, caminhões, etc.</li>
+<li> Qual valor de crédito possui interesse em ser contemplado (ele pesquisará opções com lance embutido e calculando essa diferença)</li>
+<li> Prazo para aquisição do bem: importante para a estratégia saber se é para o curto prazo (6 meses), médio prazo (até 2 anos) ou a longo prazo somente, nessa situação importante saber qual valor disponível possui para ofertar de lance e acelerar a contemplação.</li>
+<li> Valor de parcela: Como trabalhamos com algumas administradoras, possuímos um portfólio de grupos exclusivos e com isso alguns grupos já em andamento com um prazo de finalização menor o que vai impactar o valor da parcela, os grupos em andamento tendem a ter um percentual de contemplação mais baixo do que os grupos mais novos que possuem uma parcela de valor mais baixo.</li>
+</ul>                                
+</div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    O que é alavancagem financeira?
+                                </h5>
+                                <div class="ac-content">
+                                    No mundo dos investimentos, isso quer dizer aplicar em ativos utilizando uma ajuda (neste caso capital) externa. Na prática, o investidor vai realizar uma operação com um valor maior do que o que tem disponível no seu ‘caixa’, podendo assim aumentar, em caso de sucesso, os seus ganhos.
+                                </div>
+                            </div>
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Por que consórcio é melhor que financiamento?
+                                </h5>
+                                <div class="ac-content">
+                                    O consórcio apresenta uma série de vantagens: não exige valor de entrada e não tem juros, apenas uma taxa de administração que é cerca de 80% menor do que as taxas de juros do financiamento. Além disso, é uma excelente opção para quem deseja planejar antecipadamente a aquisição de um bem. Assim, é possível adquirir o bem sem precisar descapitalizar.
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Como funciona o lance?
+                                </h5>
+                                <div class="ac-content">
+                                    O lance de um consórcio corresponde a quantia de parcelas que o consorciado deseja pagar antecipadamente para diminuir o tempo de espera até a contemplação. O lance pode ser oferecido durante os sorteios realizados e, neste caso, o contemplado será o consorciado que ofertar o maior valor de lance.
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    O que é a taxa de administração?
+                                </h5>
+                                <div class="ac-content">
+                                    A taxa de administração é um valor pré-determinado, pago para a administradora do consórcio pelas atividades que são desenvolvidas, como a formação dos grupos, organização dos sorteios, checagem de documentos, entre outras funções. A taxa de administração é um valor pré-determinado, pago para a administradora do consórcio pelas atividades que são desenvolvidas, como a formação dos grupos, organização dos sorteios, checagem de documentos, entre outras funções.
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Quantas pessoas são contempladas no consórcio por mês?
+                                </h5>
+                                <div class="ac-content">
+                                    Num consórcio, todos os participantes são contemplados com a carta de crédito referente ao valor do bem pelo qual se dispuseram a pagar. A diferença é que, a cada mês, uma única pessoa é contemplada por meio de sorteio, e outra, pelo lance em um consórcio.
+
+
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Como acertar o lance do consórcio?
+                                </h5>
+                                <div class="ac-content">
+                                    Se você quer saber quais são os melhores caminhos a seguir para dar um bom lance no consórcio, o lance vencedor, vale a pena conferir as próximas dicas, pois elas poderão fazer a diferença no que diz respeito à antecipação da sua contemplação.
+                                    <ul>
+                                        <li> Saiba o que é permitido pela sua administradora, quais os benefícios do seu contrato no que diz respeito a forma de lance;</li>
+                                        <li> Busque saber o histórico de lance das últimas assembleias;</li>
+                                        <li> Guarde um recurso considerável e se planeje financeiramente para conseguir dar um lance competitivo. Em consórcios de imóveis residenciais é possível usar o FGTS para dar lance.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Como definir o valor de lance para ser contemplado?
+                                </h5>
+                                <div class="ac-content">
+                                    Os grupos novos, recém-formados, terão uma média de lance maior. Por exemplo, você fecha um grupo hoje, com cerca de 500 participantes. Na primeira assembleia, esse grupo terá um percentual de lance em torno de 50% a 60%, isso é o que se costuma ver no mercado nos anos iniciais.
+<br>
+                                    Este valor tende a cair com o decorrer dos anos. Ou seja, quanto mais parcelas pagas e quanto maior a quantidade de cotas contempladas, o lance tende a cair. Se você não tiver tanta pressa vale a pena esperar um pouco até que o lance caia, e aí você pode ir vendo o histórico de lances para saber qual o melhor momento para você.
+<br>
+                                    
+                                    Outra opção é entrar em um grupo já em andamento. É um grupo que já correu um certo número de assembleias, logo, você pode entrar nesse grupo em andamento, que já teve diversas assembleias, e ele já estará com o lance reduzido.
+<br>
+                                    
+                                    Essa é uma ótima dica para saber qual a porcentagem de lance necessária para conseguir antecipar sua contemplação, é a chamada “contemplação programada”.
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Como funcionam os tipos de lance no consórcio?
+                                </h5>
+                                <div class="ac-content">
+                                    O lance é uma das formas mais comuns de antecipar sua contemplação em um consórcio. Temos dois tipos de lance, o lance fixo e o lance livre.
+                                    <br>
+<br>
+                                    – Lance fixo
+                                    <br>
+                                    O lance fixo é onde todo mundo tem o mesmo poder de lance todos os meses.
+                                    Vamos exemplificar: Nós damos o lance fixo de 30%. Esse lance vai concorrer com outras pessoas do grupo que darão exatamente o mesmo lance naquela assembleia. Esse é o lance fixo.
+                                    <br>
+                                    <br>
+                                    
+                                    – Lance livre
+                                    <br>
+                                    A outra modalidade de lance é o lance livre. Neste caso você pode ofertar o lance máximo que conseguir. O maior lance será o vencedor.
+                                    Dependendo do caixa do grupo você tem uma pessoa contemplada por lance fixo e um número maior de contemplados por lance livre, claro, dependendo da saúde financeira do grupo.
+                                    <br>
+                                    <br>
+                                    
+                                    – Lance embutido
+                                    <br>
+                                    O lance embutido pode ser usado como forma de pagamento do lance vencedor, seja ele fixo, ou livre. Isto é, caso o consorciado oferte o lance campeão, o pagamento do mesmo poderá ser realizado através do lance embutido, ou seja, utilizando parte da carta de crédito como forma de pagamento do lance. Essa é uma maneira de ser contemplado mais rápido sem ter que colocar recursos próprios.
+                                </div>
+                            </div>
+
+                            <div class="ac-item">
+                                <h5 class="ac-title">
+                                    Posso usar o FGTS como recurso para dar lance?
+                                </h5>
+                                <div class="ac-content">
+                                    Sim, é possível e permitido por lei usar o FGTS como recurso para dar lance no consórcio. Essa é uma das formas de usar o FGTS no consórcio, dar lance. Possui algumas regras específicas, você pode verificar neste link:
+                                    <a href="https://www.fgts.gov.br/Pages/sou-trabalhador/outras_modalida.aspx">https://www.fgts.gov.br/Pages/sou-trabalhador/outras_modalida.aspx</a>
+                                    <br>
+                                    <br>
+                                    Mas fique atento, pois só é possível usar o fundo de garantia como recurso para dar o lance vencedor no consórcio no caso do mesmo ser destinado para a aquisição do primeiro imóvel. Além disso, o mesmo deve ter caráter residencial.
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="widget">
+
+                                <div class="widget-title">Alavanca Investimentos</div>
+                                <p class="mb-5">Endereço: Alameda Dr. Muricy, 54 
+                                    - sala 22 
+                                    <br> Centro - Curitiba 
+                                    <br> Paraná 
+                                    <br> 82860-140</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="widget">
+                                        <div class="widget-title">Telefones</div>
+                                        <ul class="list">
+                                            <li><a href="tel:4134521795">(41) 3452-1795</a></li>
+                                            <li><a href="tel:41984308866">(41) 9 8430-8866</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="widget">
+                                        <div class="widget-title">Features</div>
+                                        <ul class="list">
+                                            <li><a href="https://www.instagram.com/alavanca.investimentos/" target="_blank">
+                                                <i class="fab fa-instagram"></i> Instagram
+                                            </a></li>
+                                            <li><a href="https://www.facebook.com/alavancainvestimentos" target="_blank">
+                                                <i class="fab fa-facebook"></i> Facebook
+                                            </a></li>
+                                            <li><a href="https://www.linkedin.com/company/alavanca-investimentos/" target="_blank">
+                                                <i class="fab fa-linkedin"></i> Linkedin
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">&copy; 2023 
+                        All Rights Reserved.<a href="https://www.analiticadados.com.br" target="_blank" rel="noopener"></a> </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer -->
+        <a href="" class="float" target="_blank" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fab fa-whatsapp my-float"></i>
+            </a>
+    </div>
+    <!-- end: Body Inner -->
+
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgba(38,92,84,1)">
+          <h6 class="modal-title text-white text-center" id="exampleModalLabel">
+            Olá! Preencha os campos abaixo para iniciar a conversa no WhatsApp
+          </h6>
+        </div>
+        <div class="modal-body" style="background-color: rgba(235,229,222,1);">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Seu nome</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Seu email</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Seu telefone</label>
+                  <input type="number" class="form-control" id="exampleInputPassword1">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer"  style="background-color: rgba(235,229,222,1);">
+          <button type="button" class="btn btn-success" style="width: 100%; background-color: rgba(83,164,81,1) !important;">INICIAR CONVERSA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Scroll top -->
+    <!--Plugins-->
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!--Template functions-->
+    <script src="js/functions.js"></script>
+
+    <!--Calendar Component -->
+    <script src="plugins/moment/moment.min.js" type="text/javascript"></script>
+
+    <link href="plugins/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(function () {
+            jQuery("#datetimepicker1").datetimepicker({
+                useCurrent: ('year', 'month', 'day'),
+
+            });
+
+            jQuery.fn.datetimepicker.defaults.icons = {
+                time: 'far fa-clock',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-dot-circle-o',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            };
+
+        });
+    </script>
+
+
+</body>
+
+</html>
