@@ -60,101 +60,109 @@
 
         <!-- FULLSCREEN IMAGE -->
         <section id="section1" class="fullscreen" data-bg-image="homepages/taxi/images/slider/0.png">
-            <div class="bg-overlay"></div>
             <div class="container">
-                <div class="container-fullscreen">
+                <div class="">
                     <div class="text-middle">
 
                         <div class="row">
                             <div class="col-lg-6 col-sm-12">
-                                <div class="text-light m-t-40 p-t-40">
+                                <div class="text-light m-t-40 p-t-40 text-center">
 
                                     <span class="text-medium m-b-0">O CONSÓRCIO</span>
-                                    <h2 class="text-lg-x2 fw-800 text-colored m-t-0" style="font-size: 89px !important;">ESTRUTURADO</h2>
+                                    <h3 class="text-lg-x1 fw-800 text-colored m-t-0" >ESTRUTURADO</h3>
                                     <h3>com a contemplação <strong style="color: gold;text-shadow: #000 1px 0 10px;">mais rápida</strong> do Brasil</h3>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-sm-12 offset-1">
+                            <div class="col-lg-6 col-sm-12">
 
                                 <div id="book" class="card text-dark">
-                                    <div class="card-body">
-                                            <h3 class="m-b-20">Coloque suas informações e ligaremos rapidamente</h3>
-                                            <div class="row">
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div class="form-group">
-                                                        <label>NOME E SOBRENOME</label>
+                                    <form ng-submit="sendData(formdata, 'general')">
+                                        <div class="card-body">
+                                                <h3 class="m-b-20">Coloque suas informações e ligaremos rapidamente</h3>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-sm-12">
                                                         <div class="form-group">
-                                                            <input type="text" ng-model="formdata.name"  class="form-control">
+                                                            <label>NOME E SOBRENOME</label>
+                                                            <div class="form-group">
+                                                                <input type="text" required ng-model="formdata.name"  class="form-control">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>E-MAIL</label>
                                                         <div class="form-group">
-                                                            <input type="email" ng-model="formdata.email"  class="form-control">
+                                                            <label>E-MAIL</label>
+                                                            <div class="form-group">
+                                                                <input type="email" required ng-model="formdata.email"  class="form-control">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>TELEFONE</label>
                                                         <div class="form-group">
-                                                            <input type="phone" ng-model="formdata.phonenumber"  class="form-control">
+                                                            <label>TELEFONE</label>
+                                                            <div class="form-group">
+                                                                <input type="tel" required ng-model="formdata.phonenumber"  class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label>QUAL O VALOR DESEJADO </label>
-                                                        <select class="form-select" ng-model="formdata.value_target"  name="destination_from"
-                                                            id="destination_from">
-                                                            <option value="">Informe...</option>
-                                                            <option value="Até R$200 mil">Até R$200 mil</option>
-                                                            <option value="R$200 mil à R$500 mil">R$200 mil à R$500 mil</option>
-                                                            <option value="R$500 mil à R$1 milhão">R$500 mil à R$1 milhão</option>
-                                                            <option value="R$1 milhão - R$2 milhões">R$1 milhão - R$2 milhões</option>
-                                                            <option value="Acima de R$2 milhões">Acima de R$2 milhões</option>
-                                                        </select>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>QUAL O VALOR DESEJADO </label>
+                                                            <select class="form-select" required ng-model="formdata.value_target"  name="destination_from"
+                                                                id="destination_from">
+                                                                <option value="">Informe...</option>
+                                                                <option value="Até R$200 mil">Até R$200 mil</option>
+                                                                <option value="R$200 mil à R$500 mil">R$200 mil à R$500 mil</option>
+                                                                <option value="R$500 mil à R$1 milhão">R$500 mil à R$1 milhão</option>
+                                                                <option value="R$1 milhão - R$2 milhões">R$1 milhão - R$2 milhões</option>
+                                                                <option value="Acima de R$2 milhões">Acima de R$2 milhões</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label>QUAL SEU OBJETIVO</label>
-                                                        <select class="form-select" ng-model="formdata.objective"  name="destination_to"
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>QUAL SEU OBJETIVO</label>
+                                                            <select class="form-select" required ng-model="formdata.objective"  name="destination_to"
+                                                                id="destination_to">
+                                                                <option value="">Conte-nos...</option>
+                                                                <option value="Imóvel">Imóvel</option>
+                                                                <option value="Automóvel">Automóvel</option>
+                                                                <option value="Terreno">Terreno</option>
+                                                                <option value="Capital de Giro">Capital de Giro</option>
+                                                                <option value="Caminhão">Caminhão</option>
+                                                                <option value="Máquinas">Máquinas</option>
+                                                                <option value="Serviços">Serviços</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <label>TEM VALOR PARA LANCE ?</label>
+                                                            <select class="form-select" required ng-model="formdata.has_lance" name="destination_to"
                                                             id="destination_to">
-                                                            <option value="">Conte-nos...</option>
-                                                            <option value="Imóvel">Imóvel</option>
-                                                            <option value="Automóvel">Automóvel</option>
-                                                            <option value="Terreno">Terreno</option>
-                                                            <option value="Capital de Giro">Capital de Giro</option>
-                                                            <option value="Caminhão">Caminhão</option>
-                                                            <option value="Máquinas">Máquinas</option>
-                                                            <option value="Serviços">Serviços</option>
-                                                        </select>
+                                                                <option value="1">Sim, mas preciso entender maiores detalhes.</option>
+                                                                <option value="0">Não possuo, farei sem lance.</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="form-group">
-                                                        <label>TEM VALOR PARA LANCE ?</label>
-                                                        <select class="form-select" ng-model="formdata.has_lance" name="destination_to"
-                                                        id="destination_to">
-                                                            <option value="1">Sim, mas preciso entender maiores detalhes.</option>
-                                                            <option value="0">Não possuo, farei sem lance.</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
 
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="form-group">
-                                                        <button class="btn btn-dark m-t-20" style="width: 100%;" ng-click="sendData(formdata)">Falar com um especialista</button>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <button class="btn btn-dark m-t-20" style="width: 100%;" >Falar com um especialista</button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                    </div>
+                                                <div class="row" ng-show="message">
+                                                    <div class="col-lg-12">
+                                                        <div class="alert alert-info" style="width: 100%;">
+                                                            {{message}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -509,24 +517,33 @@
             Olá! Preencha os campos abaixo para iniciar a conversa no WhatsApp
           </h6>
         </div>
+        <form ng-submit="sendData(formdatawpp, 'whatsapp')">
         <div class="modal-body" style="background-color: rgba(235,229,222,1);">
+
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Seu nome</label>
-                  <input type="text" class="form-control" ng-model="formdatawpp.name"  id="exampleInputEmail1">
+                  <input type="text" class="form-control" ng-model="formdatawpp.name" required>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Seu email</label>
-                  <input type="email" class="form-control" ng-model="formdatawpp.email"  id="exampleInputPassword1">
+                  <input type="email" class="form-control" ng-model="formdatawpp.email" required>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Seu telefone</label>
-                  <input type="number" class="form-control" ng-model="formdatawpp.phone"  id="exampleInputPassword1">
+                  <input type="tel" class="form-control" ng-model="formdatawpp.phonenumber" required>
                 </div>
                 <input type="hidden" ng-model="formdatawpp.typeform"  value="whatsapp">
         </div>
         <div class="modal-footer"  style="background-color: rgba(235,229,222,1);">
-          <button type="button" class="btn btn-success" style="width: 100%; background-color: rgba(83,164,81,1) !important;" ng-click="sendData(formdatawpp)">INICIAR CONVERSA</button>
+            
+          <button type="submit" class="btn btn-success" style="width: 100%; background-color: rgba(83,164,81,1) !important;" >INICIAR CONVERSA</button>
+
+          <div class="alert alert-info" style="width: 100%;" ng-show="message">
+            {{message}}
+          </div>
         </div>
+    </form>
+
       </div>
     </div>
   </div>
@@ -542,29 +559,7 @@
     <!--Calendar Component -->
     <script src="plugins/moment/moment.min.js" type="text/javascript"></script>
 
-    <link href="plugins/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
-    <script src="plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        jQuery(function () {
-            jQuery("#datetimepicker1").datetimepicker({
-                useCurrent: ('year', 'month', 'day'),
 
-            });
-
-            jQuery.fn.datetimepicker.defaults.icons = {
-                time: 'far fa-clock',
-                date: 'fa fa-calendar',
-                up: 'fa fa-chevron-up',
-                down: 'fa fa-chevron-down',
-                previous: 'fa fa-chevron-left',
-                next: 'fa fa-chevron-right',
-                today: 'fa fa-dot-circle-o',
-                clear: 'fa fa-trash',
-                close: 'fa fa-times'
-            };
-
-        });
-    </script>
 
 
 </body>
